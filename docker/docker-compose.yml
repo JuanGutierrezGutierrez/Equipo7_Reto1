@@ -1,0 +1,16 @@
+# contenedor de python 
+services:
+  python:
+    image: python:3.12
+    container_name: python_container
+    working_dir: /app
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    networks:
+      - shared-network
+networks:
+  shared-network:
+    external: true
+    
