@@ -1,0 +1,26 @@
+# Datos persistentes de MongoDB y Redis
+docker/mongo_data/
+docker/redis_data/
+
+# Entornos virtuales de Python
+.venv/
+venv/
+
+# Caché y archivos compilados de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de registro
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuración local de editores
+.vscode/
+.idea/
+
+# Metadatos de archivos procedentes de Windows
+docker/env:Zone.Identifier
