@@ -1,5 +1,5 @@
-services:
 
+services:
   mongo:
     image: ${MONGO_IMAGE_VERSION:-mongo:6.0}
     container_name: ${MONGO_CONTAINER_NAME:-mongo}
@@ -41,8 +41,19 @@ services:
     networks:
       - shared-network
 
+  python:
+    image: python:3.12
+    container_name: python_container
+    working_dir: /app
+    volumes:
+      - ..:/app
+    stdin_open: true
+    tty: true
+    networks:
+      - shared-network
 
 networks:
   shared-network:
-    external: true
+    driver: bridge
+
     
