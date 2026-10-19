@@ -37,6 +37,37 @@ def main():
     print("\nValores nulos por columna:")
     print(df.isna().sum().to_string())
 
+    # Inspeccionar los campos internos de las constantes.
+    print("\nCampos de constantes:")
+    campos_constantes = set()
+
+    for constantes in df["constantes"].dropna():
+        if isinstance(constantes, dict):
+            campos_constantes.update(constantes.keys())
+
+    print(sorted(campos_constantes))
+
+    # 1. Resumen estructural: tipos asignados y uso de memoria real
+    print()
+    print("********************** USO DE MEMORIA **********************")
+    df.info(memory_usage="deep")
+    
+    # 2. Resumen estadístico de variables numéricas y categóricas
+    print()
+    print("********************** RESUMEN ESTADÍSTICO **********************")
+    print(df.describe(include="all"))
+    
+    # 3. Diagnóstico exhaustivo de valores ausentes (conteo y porcentaje relativo)
+    print()
+    print("********************** NULOS **********************")
+    nulos_resumen = pd.DataFrame(
+            {
+                "conteo_nulos": df.isna().sum(),
+                "porcentaje_nulos": (df.isna().mean() * 100).round(2),
+            }
+        ).sort_values(by="porcentaje_nulos", ascending=False)
+    
+    print(nulos_resumen)    
 
 if __name__ == "__main__":
     main()
