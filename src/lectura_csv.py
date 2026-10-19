@@ -14,6 +14,7 @@ def main():
 
     print(f"Archivo: {ruta_archivo}")
     df = pd.read_csv(ruta_archivo, encoding="utf-8-sig")
+    df = pd.DataFrame(main, index=['', 'usr_4'])
 
 
 
