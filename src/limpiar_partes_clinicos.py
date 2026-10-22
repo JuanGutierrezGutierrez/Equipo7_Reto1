@@ -17,6 +17,10 @@ Estrategia:
     4. Reconstruir la estructura anidada original.
     5. Guardar el JSON limpio.
     6. Verificar que la estructura de salida es compatible con la de entrada.
+
+Además, se imprime un diagnóstico estructural ANTES y DESPUÉS de la
+limpieza (memoria, estadísticos y nulos) para poder comparar y justificar
+las transformaciones aplicadas.
 """
 
 import json
@@ -31,6 +35,11 @@ import pandas as pd
 BASE = Path(__file__).resolve().parent.parent
 RUTA_ORIGEN = BASE / "data" / "partes_clinicos.json"
 RUTA_DESTINO = BASE / "data" / "partes_clinicos_limpio.json"
+
+# Opciones de visualización para que los resúmenes no se partan en terminal.
+pd.set_option("display.max_columns", None)
+pd.set_option("display.width", 200)
+pd.set_option("display.max_rows", 80)
 
 
 # ============================================================
@@ -81,6 +90,47 @@ def copia_serializada(df: pd.DataFrame) -> pd.DataFrame:
             else v
         )
     return copia
+
+
+def resumen_df(df: pd.DataFrame, etiqueta: str, completo: bool = True) -> None:
+    """
+    Imprime un diagnóstico estructural del DataFrame:
+      - tipos y uso de memoria real
+      - resumen estadístico (numéricas y categóricas)  [solo si completo=True]
+      - conteo y porcentaje de nulos por columna
+    'etiqueta' sirve para distinguir el bloque ANTES / DESPUÉS.
+    """
+    print()
+    print(f"====================== {etiqueta} ======================")
+    print(f"Filas: {len(df):,}  |  Columnas: {df.shape[1]}")
+
+    # 1. Tipos asignados y memoria real (deep=True mide también objetos anidados)
+    print()
+    print("********************** USO DE MEMORIA **********************")
+    df.info(memory_usage="deep", show_counts=True)
+
+    # 2. Estadísticos de columnas numéricas y categóricas (opcional)
+    if completo:
+        print()
+        print("********************** RESUMEN ESTADÍSTICO **********************")
+        print(df.describe(include="all").T)   # .T = columnas en filas, más legible
+
+    # 3. Diagnóstico de nulos
+    print()
+    print("********************** NULOS **********************")
+    nulos_resumen = pd.DataFrame(
+        {
+            "conteo_nulos": df.isna().sum(),
+            "porcentaje_nulos": (df.isna().mean() * 100).round(2),
+        }
+    ).sort_values(by="porcentaje_nulos", ascending=False)
+
+    nulos_con_datos = nulos_resumen[nulos_resumen["conteo_nulos"] > 0]
+    if nulos_con_datos.empty:
+        print("No hay valores nulos ✅")
+    else:
+        print(nulos_con_datos)
+    print("=" * (len(etiqueta) + 40))
 
 
 # ============================================================
@@ -288,9 +338,15 @@ def main() -> None:
     # 2) Aplanar: lista de dicts → tabla con columnas 'a.b.c'
     df = pd.json_normalize(datos_originales, sep=".")
 
+    # 2-bis) Diagnóstico ANTES de limpiar (breve: memoria + nulos)
+    resumen_df(df, "ANTES DE LIMPIAR (datos originales aplanados)", completo=False)
+
     # 3) Limpiar la tabla
     df_limpio = limpiar(df)
     print(f"Quedan {len(df_limpio)} partes tras la limpieza.")
+
+    # 3-bis) Diagnóstico DESPUÉS de limpiar (completo, aún sin exportar)
+    resumen_df(df_limpio, "DESPUÉS DE LIMPIAR (antes de exportar)", completo=True)
 
     # 4) Volver a la estructura anidada
     datos_limpios = reconstruir_anidado(df_limpio)

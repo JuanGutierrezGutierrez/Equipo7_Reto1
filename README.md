@@ -13,3 +13,18 @@
 Si en el futuro se añade una librería nueva a `requirements.txt`,
 basta con recrear el contenedor de Python:
    docker compose up -d --force-recreate python
+
+El script de limpieza de json "limpiar_limpiar_partes.clinicos.py" hace seis cosas en orden:
+
+Leer el JSON original sin tocarlo.
+
+Aplanarlo a tabla con json_normalize, para poder limpiarlo con pandas.
+
+Limpiar la tabla con seis reglas: quitar duplicados (con una copia serializada porque hay listas que no se pueden hashear), normalizar textos categóricos, unificar alergias y antecedentes a lista, convertir edad y constantes a número, aplicar reglas de dominio (valores fisiológicamente imposibles → nulo), e imputar solo edad con la mediana.
+
+Reconstruir la anidación original ('a.b.c' → {'a':{'b':{'c':...}}}), omitiendo los nulos.
+
+Guardar el fichero limpio sin modificar el original.
+
+Verificar que la estructura de salida es compatible con la de entrada: misma lista de objetos, mismas claves de primer nivel, subdocumentos como diccionario, listas como listas, y que el JSON se recarga sin errores.
+
