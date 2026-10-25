@@ -66,10 +66,10 @@ services:
     networks:
       - shared-network
 
-    volumes:
-      redis-data:
+volumes:
+  redis-data:
 
-    networks:
-      shared-network:
-        external: true
+networks:
+  shared-network:
+    external: true
 
