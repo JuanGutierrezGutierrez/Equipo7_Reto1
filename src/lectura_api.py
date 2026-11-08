@@ -26,6 +26,13 @@ while True:
 
         # Aquí se llamaría a la función de PABLO
         # procesar_datos(df)
+def Procesar_datos(df):
+            datos = df.loc[0, "respuesta"]
+            datos_ni = datos['nuevos_ingresos']
+            datos_pa = datos['pacientes_alta']
+            return datos_ni, datos_pa
+
+
 
     except Exception as e:
         print(f"Error: {e}")
