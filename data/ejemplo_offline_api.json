@@ -1,0 +1,1323 @@
+[
+    {
+        "timestamp":"2026-10-29T13:36:09.069",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284532.6206841469,
+            "total_nuevos":1,
+            "total_altas":1,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70044",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-731527",
+                        "nombre":"Ana García Pérez",
+                        "edad":57,
+                        "motivo_consulta":"Urgencia aguda por neurologia",
+                        "timestamp_llegada":1793284532.6205863953,
+                        "fecha_hora_texto":"2026-10-29 15:35:32"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":3,
+                        "color":"amarillo",
+                        "categoria_patologia":"Neurologia",
+                        "tiempo_max_espera_min":60,
+                        "constantes":{
+                            "temperatura_c":36.3,
+                            "frecuencia_cardiaca":109,
+                            "tension_arterial":"160\/86",
+                            "saturacion_o2":97,
+                            "glucemia_mg_dl":117
+                        },
+                        "antecedentes":[
+                            "fumador",
+                            "asma"
+                        ],
+                        "alergias":[
+                            "sulfamidas"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad AMARILLO.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70041",
+                    "sip_paciente":"SIP-812313",
+                    "timestamp_alta":1793284532.6205821037,
+                    "fecha_hora_alta":"2026-10-29 15:35:32",
+                    "destino_alta":"observacion"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:14.075",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284537.6252093315,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:19.078",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284542.629229784,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:24.083",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284547.6327102184,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70045",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-450059",
+                        "nombre":"Irene Peña Cano",
+                        "edad":69,
+                        "motivo_consulta":"Urgencia aguda por infeccioso",
+                        "timestamp_llegada":1793284547.6326267719,
+                        "fecha_hora_texto":"2026-10-29 15:35:47"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":2,
+                        "color":"naranja",
+                        "categoria_patologia":"Infeccioso",
+                        "tiempo_max_espera_min":10,
+                        "constantes":{
+                            "temperatura_c":38.8,
+                            "frecuencia_cardiaca":114,
+                            "tension_arterial":"115\/70",
+                            "saturacion_o2":100,
+                            "glucemia_mg_dl":175
+                        },
+                        "antecedentes":[
+                            "fumador",
+                            "dislipemia"
+                        ],
+                        "alergias":[
+
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad NARANJA.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:29.089",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284552.6373488903,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:34.091",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284557.6412944794,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:39.096",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284562.6461412907,
+            "total_nuevos":1,
+            "total_altas":1,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70046",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-309828",
+                        "nombre":"Iván Santiago Giménez",
+                        "edad":88,
+                        "motivo_consulta":"Urgencia aguda por psiquiatria",
+                        "timestamp_llegada":1793284562.6460447311,
+                        "fecha_hora_texto":"2026-10-29 15:36:02"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":2,
+                        "color":"naranja",
+                        "categoria_patologia":"Psiquiatria",
+                        "tiempo_max_espera_min":10,
+                        "constantes":{
+                            "temperatura_c":37.7,
+                            "frecuencia_cardiaca":95,
+                            "tension_arterial":"125\/86",
+                            "saturacion_o2":100,
+                            "glucemia_mg_dl":null
+                        },
+                        "antecedentes":[
+                            "fumador",
+                            "diabetes"
+                        ],
+                        "alergias":[
+                            "sulfamidas"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad NARANJA.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70043",
+                    "sip_paciente":"SIP-472501",
+                    "timestamp_alta":1793284562.6460399628,
+                    "fecha_hora_alta":"2026-10-29 15:36:02",
+                    "destino_alta":"traslado_uci"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:44.101",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284567.650393486,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:49.105",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284572.6542508602,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:54.111",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284577.6589972973,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70047",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-452963",
+                        "nombre":"Beatriz Gil Sánchez",
+                        "edad":46,
+                        "motivo_consulta":"Urgencia aguda por infeccioso",
+                        "timestamp_llegada":1793284577.6588692665,
+                        "fecha_hora_texto":"2026-10-29 15:36:17"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":3,
+                        "color":"amarillo",
+                        "categoria_patologia":"Infeccioso",
+                        "tiempo_max_espera_min":60,
+                        "constantes":{
+                            "temperatura_c":37.5,
+                            "frecuencia_cardiaca":88,
+                            "tension_arterial":"137\/67",
+                            "saturacion_o2":95,
+                            "glucemia_mg_dl":196
+                        },
+                        "antecedentes":[
+                            "fumador",
+                            "diabetes"
+                        ],
+                        "alergias":null,
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad AMARILLO.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:36:59.117",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284582.6638402939,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:04.121",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284587.6688876152,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:09.126",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284592.6738855839,
+            "total_nuevos":1,
+            "total_altas":1,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70048",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-473316",
+                        "nombre":"Andrea Pascual Mora",
+                        "edad":30,
+                        "motivo_consulta":"Urgencia aguda por psiquiatria",
+                        "timestamp_llegada":1793284592.6737742424,
+                        "fecha_hora_texto":"2026-10-29 15:36:32"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":4,
+                        "color":"verde",
+                        "categoria_patologia":"Psiquiatria",
+                        "tiempo_max_espera_min":120,
+                        "constantes":{
+                            "temperatura_c":36.7,
+                            "frecuencia_cardiaca":121,
+                            "tension_arterial":"120\/78",
+                            "saturacion_o2":98,
+                            "glucemia_mg_dl":161
+                        },
+                        "antecedentes":[
+
+                        ],
+                        "alergias":[
+                            "penicilina"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad VERDE.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70039",
+                    "sip_paciente":"SIP-632680",
+                    "timestamp_alta":1793284592.673769474,
+                    "fecha_hora_alta":"2026-10-29 15:36:32",
+                    "destino_alta":"ingreso_pediatria"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:14.131",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284597.6781344414,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:19.135",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284602.682570219,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:24.141",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284607.6866669655,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70049",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-258889",
+                        "nombre":"Beatriz Gil Sánchez",
+                        "edad":83,
+                        "motivo_consulta":"Urgencia aguda por nefrourologia",
+                        "timestamp_llegada":1793284607.6865770817,
+                        "fecha_hora_texto":"2026-10-29 15:36:47"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":4,
+                        "color":"verde",
+                        "categoria_patologia":"Nefrourologia",
+                        "tiempo_max_espera_min":120,
+                        "constantes":{
+                            "temperatura_c":38.1,
+                            "frecuencia_cardiaca":99,
+                            "tension_arterial":"154\/64",
+                            "saturacion_o2":91,
+                            "glucemia_mg_dl":94
+                        },
+                        "antecedentes":[
+                            "asma"
+                        ],
+                        "alergias":[
+
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad VERDE.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:29.148",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284612.6928758621,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:34.151",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284617.6973626614,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:39.156",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284622.7015175819,
+            "total_nuevos":1,
+            "total_altas":1,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70050",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-181221",
+                        "nombre":"Silvia Hidalgo Vidal",
+                        "edad":22,
+                        "motivo_consulta":"Urgencia aguda por cardiovascular",
+                        "timestamp_llegada":1793284622.7014074326,
+                        "fecha_hora_texto":"2026-10-29 15:37:02"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":2,
+                        "color":"naranja",
+                        "categoria_patologia":"Cardiovascular",
+                        "tiempo_max_espera_min":10,
+                        "constantes":{
+                            "temperatura_c":37.0,
+                            "frecuencia_cardiaca":95,
+                            "tension_arterial":"135\/73",
+                            "saturacion_o2":98,
+                            "glucemia_mg_dl":89
+                        },
+                        "antecedentes":[
+                            "asma",
+                            "hipertension"
+                        ],
+                        "alergias":[
+
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad NARANJA.",
+                        "modulo_cardiologia":{
+                            "ecg_realizado":true,
+                            "ritmo":"fibrilacion_auricular",
+                            "troponinas_ng_ml":1.59,
+                            "dolor_irradiado":true
+                        },
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70045",
+                    "sip_paciente":"SIP-450059",
+                    "timestamp_alta":1793284622.7014026642,
+                    "fecha_hora_alta":"2026-10-29 15:37:02",
+                    "destino_alta":"observacion"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:44.160",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284627.7056396008,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:49.165",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284632.7097342014,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:54.171",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284637.7147021294,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70051",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-302865",
+                        "nombre":"Alba Campos Rivas",
+                        "edad":89,
+                        "motivo_consulta":"Urgencia aguda por neurologia",
+                        "timestamp_llegada":1793284637.7145912647,
+                        "fecha_hora_texto":"2026-10-29 15:37:17"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":2,
+                        "color":"naranja",
+                        "categoria_patologia":"Neurologia",
+                        "tiempo_max_espera_min":10,
+                        "constantes":{
+                            "temperatura_c":38.9,
+                            "frecuencia_cardiaca":102,
+                            "tension_arterial":"107\/68",
+                            "saturacion_o2":91,
+                            "glucemia_mg_dl":160
+                        },
+                        "antecedentes":[
+
+                        ],
+                        "alergias":[
+
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad NARANJA.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:37:59.176",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284642.7192828655,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:04.178",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284647.7231776714,
+            "total_nuevos":0,
+            "total_altas":1,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70042",
+                    "sip_paciente":"SIP-520705",
+                    "timestamp_alta":1793284647.7231276035,
+                    "fecha_hora_alta":"2026-10-29 15:37:27",
+                    "destino_alta":"traslado_uci"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:09.184",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284652.7266104221,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70052",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-582207",
+                        "nombre":"David Cano Rodríguez",
+                        "edad":41,
+                        "motivo_consulta":"Urgencia aguda por cardiovascular",
+                        "timestamp_llegada":1793284652.7265169621,
+                        "fecha_hora_texto":"2026-10-29 15:37:32"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":2,
+                        "color":"naranja",
+                        "categoria_patologia":"Cardiovascular",
+                        "tiempo_max_espera_min":10,
+                        "constantes":{
+                            "temperatura_c":38.0,
+                            "frecuencia_cardiaca":74,
+                            "tension_arterial":"137\/83",
+                            "saturacion_o2":92,
+                            "glucemia_mg_dl":207
+                        },
+                        "antecedentes":[
+                            "asma"
+                        ],
+                        "alergias":null,
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad NARANJA.",
+                        "modulo_cardiologia":{
+                            "ecg_realizado":true,
+                            "ritmo":"sinusal",
+                            "troponinas_ng_ml":0.08,
+                            "dolor_irradiado":true
+                        },
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:14.190",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284657.7320508957,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:19.195",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284662.7369334698,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:24.199",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284667.7410540581,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70053",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-302046",
+                        "nombre":"Marta Castro Domínguez",
+                        "edad":40,
+                        "motivo_consulta":"Urgencia aguda por infeccioso",
+                        "timestamp_llegada":1793284667.740953207,
+                        "fecha_hora_texto":"2026-10-29 15:37:47"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":3,
+                        "color":"amarillo",
+                        "categoria_patologia":"Infeccioso",
+                        "tiempo_max_espera_min":60,
+                        "constantes":{
+                            "temperatura_c":38.6,
+                            "frecuencia_cardiaca":104,
+                            "tension_arterial":"143\/69",
+                            "saturacion_o2":100,
+                            "glucemia_mg_dl":null
+                        },
+                        "antecedentes":[
+                            "dislipemia"
+                        ],
+                        "alergias":null,
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad AMARILLO.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:29.205",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284672.7455437183,
+            "total_nuevos":0,
+            "total_altas":1,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70032",
+                    "sip_paciente":"SIP-611436",
+                    "timestamp_alta":1793284672.7454965115,
+                    "fecha_hora_alta":"2026-10-29 15:37:52",
+                    "destino_alta":"ingreso_planta"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:34.207",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284677.749620676,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:39.211",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284682.7530536652,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70054",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-233315",
+                        "nombre":"David Cano Rodríguez",
+                        "edad":42,
+                        "motivo_consulta":"Urgencia aguda por infeccioso",
+                        "timestamp_llegada":1793284682.7528808117,
+                        "fecha_hora_texto":"2026-10-29 15:38:02"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":4,
+                        "color":"verde",
+                        "categoria_patologia":"Infeccioso",
+                        "tiempo_max_espera_min":120,
+                        "constantes":{
+                            "temperatura_c":39.0,
+                            "frecuencia_cardiaca":75,
+                            "tension_arterial":"160\/72",
+                            "saturacion_o2":92,
+                            "glucemia_mg_dl":135
+                        },
+                        "antecedentes":[
+                            "hipertension"
+                        ],
+                        "alergias":[
+                            "penicilina"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad VERDE.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:44.216",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284687.7578639984,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:49.221",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284692.761654377,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:54.227",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284697.7666027546,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70055",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-837384",
+                        "nombre":"Carlos Ruiz Martínez",
+                        "edad":28,
+                        "motivo_consulta":"Urgencia aguda por traumatologia",
+                        "timestamp_llegada":1793284697.7665104866,
+                        "fecha_hora_texto":"2026-10-29 15:38:17"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":2,
+                        "color":"naranja",
+                        "categoria_patologia":"Traumatologia",
+                        "tiempo_max_espera_min":10,
+                        "constantes":{
+                            "temperatura_c":37.5,
+                            "frecuencia_cardiaca":106,
+                            "tension_arterial":"129\/73",
+                            "saturacion_o2":null,
+                            "glucemia_mg_dl":75
+                        },
+                        "antecedentes":[
+                            "dislipemia"
+                        ],
+                        "alergias":[
+                            "AINEs"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad NARANJA.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":{
+                            "zona_afectada":"tobillo_der",
+                            "deformidad_evidente":true,
+                            "requiere_rx":true,
+                            "inmovilizacion_previa":false
+                        },
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:38:59.233",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284702.771499157,
+            "total_nuevos":0,
+            "total_altas":1,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70036",
+                    "sip_paciente":"SIP-438920",
+                    "timestamp_alta":1793284702.7714467049,
+                    "fecha_hora_alta":"2026-10-29 15:38:22",
+                    "destino_alta":"domicilio"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:04.235",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284707.7754890919,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:09.240",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284712.7804043293,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70056",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-621531",
+                        "nombre":"Mario Reyes Cruz",
+                        "edad":26,
+                        "motivo_consulta":"Urgencia aguda por psiquiatria",
+                        "timestamp_llegada":1793284712.7803175449,
+                        "fecha_hora_texto":"2026-10-29 15:38:32"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":3,
+                        "color":"amarillo",
+                        "categoria_patologia":"Psiquiatria",
+                        "tiempo_max_espera_min":60,
+                        "constantes":{
+                            "temperatura_c":37.5,
+                            "frecuencia_cardiaca":67,
+                            "tension_arterial":"123\/64",
+                            "saturacion_o2":94,
+                            "glucemia_mg_dl":197
+                        },
+                        "antecedentes":[
+
+                        ],
+                        "alergias":[
+                            "penicilina"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad AMARILLO.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:14.244",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284717.783643961,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:19.250",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284722.7874295712,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:24.255",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284727.7928085327,
+            "total_nuevos":1,
+            "total_altas":1,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70057",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-857827",
+                        "nombre":"Marta Castro Domínguez",
+                        "edad":25,
+                        "motivo_consulta":"Urgencia aguda por psiquiatria",
+                        "timestamp_llegada":1793284727.792709589,
+                        "fecha_hora_texto":"2026-10-29 15:38:47"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":4,
+                        "color":"verde",
+                        "categoria_patologia":"Psiquiatria",
+                        "tiempo_max_espera_min":120,
+                        "constantes":{
+                            "temperatura_c":36.5,
+                            "frecuencia_cardiaca":72,
+                            "tension_arterial":"129\/69",
+                            "saturacion_o2":98,
+                            "glucemia_mg_dl":null
+                        },
+                        "antecedentes":[
+                            "dislipemia"
+                        ],
+                        "alergias":[
+                            "penicilina"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad VERDE.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70048",
+                    "sip_paciente":"SIP-473316",
+                    "timestamp_alta":1793284727.7927050591,
+                    "fecha_hora_alta":"2026-10-29 15:38:47",
+                    "destino_alta":"traslado_uci"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:29.261",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284732.7973983288,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:34.263",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284737.8021879196,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:39.267",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284742.8050789833,
+            "total_nuevos":1,
+            "total_altas":0,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70058",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-189509",
+                        "nombre":"Alba Campos Rivas",
+                        "edad":33,
+                        "motivo_consulta":"Urgencia aguda por psiquiatria",
+                        "timestamp_llegada":1793284742.8049581051,
+                        "fecha_hora_texto":"2026-10-29 15:39:02"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":3,
+                        "color":"amarillo",
+                        "categoria_patologia":"Psiquiatria",
+                        "tiempo_max_espera_min":60,
+                        "constantes":{
+                            "temperatura_c":39.1,
+                            "frecuencia_cardiaca":121,
+                            "tension_arterial":"125\/64",
+                            "saturacion_o2":96,
+                            "glucemia_mg_dl":null
+                        },
+                        "antecedentes":[
+                            "hipertension",
+                            "dislipemia"
+                        ],
+                        "alergias":null,
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad AMARILLO.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:44.271",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284747.8081495762,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:49.276",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284752.812212944,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:54.281",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284757.81641078,
+            "total_nuevos":1,
+            "total_altas":1,
+            "nuevos_ingresos":[
+                {
+                    "id_episodio":"EP-2026-70059",
+                    "datos_admision":{
+                        "sip_paciente":"SIP-644826",
+                        "nombre":"Jorge Herrera Crespo",
+                        "edad":53,
+                        "motivo_consulta":"Urgencia aguda por nefrourologia",
+                        "timestamp_llegada":1793284757.8163142204,
+                        "fecha_hora_texto":"2026-10-29 15:39:17"
+                    },
+                    "datos_triaje":{
+                        "nivel_manchester":3,
+                        "color":"amarillo",
+                        "categoria_patologia":"Nefrourologia",
+                        "tiempo_max_espera_min":60,
+                        "constantes":{
+                            "temperatura_c":38.3,
+                            "frecuencia_cardiaca":67,
+                            "tension_arterial":"134\/90",
+                            "saturacion_o2":98,
+                            "glucemia_mg_dl":87
+                        },
+                        "antecedentes":[
+
+                        ],
+                        "alergias":[
+                            "penicilina"
+                        ],
+                        "notas_triaje":"Paciente valorado en triaje con nivel de prioridad AMARILLO.",
+                        "modulo_cardiologia":null,
+                        "modulo_traumatologia":null,
+                        "modulo_pediatria":null
+                    }
+                }
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70028",
+                    "sip_paciente":"SIP-742586",
+                    "timestamp_alta":1793284757.8163096905,
+                    "fecha_hora_alta":"2026-10-29 15:39:17",
+                    "destino_alta":"domicilio"
+                }
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:39:59.288",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284762.821470499,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+
+            ]
+        }
+    },
+    {
+        "timestamp":"2026-10-29T13:40:04.290",
+        "respuesta":{
+            "status":"ok",
+            "timestamp_consulta":1793284767.8269536495,
+            "total_nuevos":0,
+            "total_altas":0,
+            "nuevos_ingresos":[
+
+            ],
+            "pacientes_alta":[
+                {
+                    "id_episodio":"EP-2026-70055",
+                    "sip_paciente":"SIP-837384",
+                    "timestamp_alta":1793284622.7014026642,
+                    "fecha_hora_alta":"2026-10-29 15:37:02",
+                    "destino_alta":"observacion"
+                }
+            ]
+        }
+    }
+]
