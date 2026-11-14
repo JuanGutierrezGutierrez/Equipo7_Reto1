@@ -17,8 +17,8 @@ def main():
     db = client["urgencias_medicas"]
     collection = db["episodios_urgencias"]
 
-
-    df_admisiones = pd.read_csv(CSV_LIMPIO)
+    df_admisiones = pd.read_csv(CSV_LIMPIO, parse_dates=["timestamp_llegada", "timestamp_alta"])
+    #df_admisiones = pd.read_csv(CSV_LIMPIO)
 
     with open(JSON_LIMPIO, "r", encoding="utf-8") as f:
         partes_clinicos = json.load(f)
@@ -26,7 +26,8 @@ def main():
 
 
     df_unido = pd.merge(df_admisiones, df_partes, on="id_episodio", how="inner", suffixes=("", "_dup"))
-    registros = df_unido.to_dict(orient="records")
+    #registros = df_unido.to_dict(orient="records")
+    registros = df_unido.astype(object).where(df_unido.notna(), None).to_dict(orient="records")
 
     # 5. Insertar los documentos combinados en MongoDB
     if registros:

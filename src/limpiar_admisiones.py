@@ -12,7 +12,6 @@ Dependencias: SOLO pandas.
 
 import re
 import logging
-from datetime import datetime
 
 import pandas as pd
 
@@ -56,20 +55,6 @@ FC_MIN, FC_MAX   = 20, 250
 PAS_MIN, PAS_MAX = 50, 300
 PAD_MIN, PAD_MAX = 20, 200
 
-# Formatos de fecha presentes en el CSV (cubren el 100% de los casos vistos)
-FORMATOS_FECHA = (
-    "%d/%m/%Y %H:%M:%S",
-    "%d/%m/%Y %I:%M %p",
-    "%d/%m/%Y %I:%M:%S %p",
-    "%d/%m/%Y %H:%M",
-    "%Y/%m/%d %H:%M:%S",
-    "%Y-%m-%d %H:%M:%S",
-    "%Y-%m-%dT%H:%M:%SZ",
-    "%Y-%m-%dT%H:%M:%S",
-    "%d-%m-%Y %H:%M:%S",
-    "%d-%m-%Y %I:%M %p",
-)
-
 
 # ---------------------------------------------------------------------------
 # Utilidades
@@ -86,23 +71,23 @@ def _clean_str(val):
     return None if _is_null_token(val) else str(val).strip()
 
 
-def parse_fecha(val):
+def estandarizar_fechas(serie):
     """
-    Devuelve datetime o None. Sin dateutil: solo strptime con formatos conocidos.
+    Convierte una columna de texto con fechas en varios formatos a datetime.
+    Lo que no se pueda leer (N/D, NULL, vacio, corrupto) queda como NaT.
+
+    Se leen en dos grupos porque dayfirst afecta a todo el grupo:
+      - las que empiezan por el año (2026-09-08, 2026/09/08)  -> dayfirst=False
+      - las que empiezan por el dia (08/09/2026, 08-09-2026)  -> dayfirst=True
     """
-    if _is_null_token(val):
-        return None
-    s = str(val).strip()
-    if s.upper() in {"NULL", "N/D", "NONE"}:
-        return None
-    for fmt in FORMATOS_FECHA:
-        try:
-            return datetime.strptime(s, fmt)
-        except ValueError:
-            continue
-    # Formato no previsto -> None (se puede auditar en rechazos si interesa)
-    log.debug("Fecha no parseable: %r", s)
-    return None
+    s = serie.astype("string").str.strip().str.replace("Z", "", regex=False)
+    empieza_por_anio = s.str[:4].str.isdigit().fillna(False)
+
+    con_anio = pd.to_datetime(s.where(empieza_por_anio),
+                              format="mixed", errors="coerce")
+    con_dia = pd.to_datetime(s.where(~empieza_por_anio),
+                             format="mixed", dayfirst=True, errors="coerce")
+    return con_anio.fillna(con_dia)
 
 
 def parse_frecuencia(val):
@@ -155,8 +140,8 @@ def limpiar_dataframe(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     df["id_episodio"]         = df["id_episodio"].map(_clean_str)
     df["sip_paciente"]        = df["sip_paciente"].map(_clean_str)
     df["motivo_consulta"]     = df["motivo_consulta"].map(_clean_str)
-    df["timestamp_llegada"]   = df["timestamp_llegada"].map(parse_fecha)
-    df["timestamp_alta"]      = df["timestamp_alta"].map(parse_fecha)
+    df["timestamp_llegada"]   = estandarizar_fechas(df["timestamp_llegada"])
+    df["timestamp_alta"]      = estandarizar_fechas(df["timestamp_alta"])
     df["frecuencia_cardiaca"] = df["frecuencia_cardiaca"].map(parse_frecuencia)
     df["tension_arterial"]    = df["tension_arterial"].map(parse_tension)
     df["destino_alta"]        = df["destino_alta"].map(normalizar_destino)
@@ -164,16 +149,27 @@ def limpiar_dataframe(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     mask_sin_id   = df["id_episodio"].isna()
     mask_sin_fech = df["timestamp_llegada"].isna() & df["timestamp_alta"].isna()
 
-    rechazos = df[mask_sin_id | mask_sin_fech].copy()
+    # Solo se rechaza lo que no se puede identificar (sin id_episodio).
+    # Un episodio sin fechas se conserva: sigue aportando datos validos y
+    # cada consulta excluye por su cuenta lo que no puede usar.
+    log.info("Filas sin ninguna fecha valida (se conservan): %d",
+             (mask_sin_fech & ~mask_sin_id).sum())
+
+    # Alta anterior a la llegada: las fechas son incoherentes y no sabemos cual
+    # de las dos es la erronea. Se anulan las dos y el episodio se conserva.
+    mask_incoherente = df["timestamp_alta"] < df["timestamp_llegada"]
+    log.info("Episodios con alta anterior a la llegada (fechas anuladas): %d",
+             mask_incoherente.sum())
+    df.loc[mask_incoherente, ["timestamp_llegada", "timestamp_alta"]] = pd.NaT
+
+    rechazos = df[mask_sin_id].copy()
     if len(rechazos):
-        rechazos["_motivo_rechazo"] = pd.NA
-        rechazos.loc[mask_sin_id, "_motivo_rechazo"]   = "sin_id_episodio"
-        rechazos.loc[mask_sin_fech, "_motivo_rechazo"] = "sin_fechas_validas"
+        rechazos["_motivo_rechazo"] = "sin_id_episodio"
         log.info("Filas rechazadas: %d", len(rechazos))
     else:
         log.info("Filas rechazadas: 0")
 
-    df = df[~(mask_sin_id | mask_sin_fech)].copy()
+    df = df[~mask_sin_id].copy()
     df = df[[
         "id_episodio",
         "sip_paciente",
