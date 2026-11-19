@@ -204,11 +204,13 @@ El primer script muestra un DataFrame con resultados de una agregación. El segu
 - La carga histórica reemplaza el contenido previo de la colección de episodios.
 - Los datos clínicos requieren especial cuidado: usar datos ficticios o debidamente anonimizados y no publicar información identificable de pacientes.
 - El directorio `docker/mongo_data/` contiene datos persistentes locales de MongoDB y no debería incluirse en el control de versiones.
+- Para acceder a Mongo de manera visual hay que acceder a la siguiente url: 10.201.59.247:8081
+
 
 ## equipo
 
 Desarrollado por: 
 
-1. Jose María Honrado 
+1. Jose María Honrado  Gonzalez
 2. Juan Gutierrez Gutierrez 
 3. Pablo Mendoza Mayo
